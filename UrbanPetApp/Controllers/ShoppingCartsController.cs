@@ -82,10 +82,8 @@ namespace UrbanPetApp.Controllers
         [HttpPost]
         public ActionResult Checkout()
         {
-            // Tuka ja imame kartickata
             var cart = ShoppingCart.GetCart(this.HttpContext);
 
-            // U modelo ima metod dek prave emptyCart a cart vekje gu imamo tak da treba samo da gu ispraznemo
             cart.EmptyCart();
 
             // Display the confirmation message
@@ -95,7 +93,7 @@ namespace UrbanPetApp.Controllers
                 CartTotal = cart.GetTotal(),
                 CartCount = cart.GetCount(),
                 ItemCount = 0,
-                DeleteId = 0  //ovie vidi tuj dali treba site i kako bi mozelo da redirektira kon index, (mozda za da gu videmo ovaj promena kje treba refresh)
+                DeleteId = 0  
             };
             return Json(results);
         }
