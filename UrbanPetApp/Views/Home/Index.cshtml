@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<link rel="stylesheet" type="text/css" href="~/Content/styles.css">
+
+<body style="background-color:beige">
+    <div class="jumbotron" style="background-color:white">
+        <h1 style="text-align:left; font-family: 'Times New Roman', Times, serif; font-style: unset; font-weight: bolder"> URBANPET</h1>
+        <p>With everything from a huge range of comfy beds, to pet food and toys, we have everything to satisfy your pets needs. </p>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="pet-card">
+                    <img src="https://media.istockphoto.com/id/489978130/photo/cute-little-red-kitten-sitting-and-looking-straight-at-camera.jpg?s=612x612&w=0&k=20&c=bFpfN-iD6IdjZUlgJ_0Z5w4BVhkqaQYuxf-AyYUaJ3Y=" style="height: 350px; max-width:300px" alt="Cat">
+                    <h2>Cat Products</h2>
+                    <p>Explore our collection for your adorable cat.</p>
+                    @Html.ActionLink("View Products", "Index", "Products", new { area = "" }, new { @class = "btn btn-primary" })
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="pet-card">
+                    <img src="https://media.istockphoto.com/id/119717114/photo/golden-retriever-puppy-2-months-old-sitting-white-background.jpg?s=612x612&w=0&k=20&c=pd-6sn-l7HgQ3zD-1eHfgaFZCOcTMazaNHbFzkAupOI=" style="height: 350px; max-width:300px" alt="Dog">
+                    <h2>Dog Products</h2>
+                    <p>Find the perfect toy for your loyal friend.</p>
+                    @Html.ActionLink("View Products", "Index", "Products", new { area = "" }, new { @class = "btn btn-primary" })
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="pet-card">
+                    <img src="https://media.istockphoto.com/id/675804830/photo/beige-hamster.jpg?s=612x612&w=0&k=20&c=e4P9Z3U3PVwtNEMZUCkoDkBrHr9E0XDxk9fZdDKZHZ4=" style="height: 350px; max-width:300px" alt="Hamster">
+                    <h2>Hamster Products</h2>
+                    <p>Find all the supplies you need to create a comfortable habitat for your small pet.</p>
+                    @Html.ActionLink("View Products", "Index", "Products", new { area = "" }, new { @class = "btn btn-primary" })
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+

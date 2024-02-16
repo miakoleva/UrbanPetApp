@@ -1,0 +1,43 @@
+﻿@model UrbanPetApp.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<body style="background-color:beige">
+    <div>
+        <h4>@Model.Name</h4>
+        <hr />
+        <dl class="dl-horizontal">
+
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+
+            <dd>
+                <img src="@Model.ImageUrl" style="max-height:200px; max-width:200px" />
+            </dd>
+
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+
+
+
+
+
+        </dl>
+    </div>
+    <p>
+        @if (User.IsInRole("Administrator"))
+        {
+            @Html.ActionLink("Edit", "Edit", new { id = Model.Id })}
+        <button>
+            @Html.ActionLink("Back to List", "Index", "Products")
+        </button>
+
+    
+    </p>
+
+</body>
